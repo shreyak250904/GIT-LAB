@@ -1,0 +1,13 @@
+import numpy as np
+import matplotlib.pyplot as plt
+dates=["sep20","sep21","sep22","sep23","sep24","sep25","sep26","sep27","sep28","sep29"]
+temperature=[14,20,28,12,19,22,25,17,18,27]
+wind=[19,17,22,20,29,28,26,32,23,31]
+ypos=np.arange(len(dates))
+plt.bar(ypos-0.2,temperature,color=' purple',width=.4,label="Temperature(in Celsius)")
+plt.bar(ypos+0.2,wind,color='pink',width=.4,label="Wind(in km/hr)")
+plt.xticks(ypos,dates)
+plt.xlabel("Dates---------->")
+plt.ylabel("Temperture and Wind---------->")
+plt.title("Temperture and Wind For Next 10 Days")
+plt.legend()
